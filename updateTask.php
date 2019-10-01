@@ -11,15 +11,6 @@ if(isset($_REQUEST['id'])){
        $title = $row['title'];
        $description = $row['description'];
     }};
-    
-    if(isset($_POST['updateTask'])){
-        $id = $_REQUEST['id'];
-        $title = $_POST['title'];
-        $description = $_POST['description'];
-        header("location:index.php");
-    };
-    $sql = "UPDATE myTable SET title= '$title',description = '$description' WHERE id= $id";
-    $result = mysqli_query($conn, $sql);
        ?>
         <form action="updateTask.php?id=<?php echo $_REQUEST['id']?>" method="POST">
         <div class="input-wrapper">
@@ -28,3 +19,13 @@ if(isset($_REQUEST['id'])){
          <textarea name="description" cols="30" rows="10" placeholder="Description task" ><?php echo $description ?></textarea>
          <button name ="updateTask" value="updateTask" >Update task</button>
         </form>
+        <?php
+        if(isset($_POST['updateTask'])){
+            $id = $_REQUEST['id'];
+            $title = $_POST['title'];
+            $description = $_POST['description'];
+            header("location:index.php");
+        };
+        $sql = "UPDATE myTable SET title= '$title',description = '$description' WHERE id= $id";
+        $result = mysqli_query($conn, $sql); 
+         ?>
