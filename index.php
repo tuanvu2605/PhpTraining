@@ -9,14 +9,11 @@ include 'db.php';
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>My first PHP program</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="style.css">
  </head>
  <body>
- <div><nav><a href="index.php">My first PHP program</a></nav></div>
+ <div class="anchor"><nav><a href="index.php">My first PHP program</a></nav></div>
   <main>
-  <div clas="message"></div>
-
-
-
   <div class="left">
   <form action="saveTask.php" method="POST">
   <div class="input-wrapper">
@@ -27,7 +24,7 @@ include 'db.php';
   <input type="submit" value="Save task" name="saveTask"></div>
   </form>
   </div>
-
+</div>
   <div class="right">
   <table>
   <thead>
