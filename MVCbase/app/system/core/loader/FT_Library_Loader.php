@@ -1,0 +1,1 @@
+<!-- Doi tuong quan ly va load library -->
